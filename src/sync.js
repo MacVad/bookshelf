@@ -3,7 +3,11 @@
 import _ from 'lodash';
 import Promise from './base/promise';
 
-const supportsReturning = (client) => _.includes(['postgresql', 'postgres', 'pg', 'oracle', 'mssql'], client)
+// const supportsReturning = (client) => _.includes(['postgresql', 'postgres', 'pg', 'oracle', 'mssql'], client)
+const supportsReturning = (client) => {
+  console.log('supportsReturning option disabled')
+  return false;
+}
 
 // Sync is the dispatcher for any database queries,
 // taking the "syncing" `model` or `collection` being queried, along with
